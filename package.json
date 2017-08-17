@@ -1,0 +1,8 @@
+{
+  "name": "build_system",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sandipbhuyan/build_system.git",
+  "author": "sandipkumarbhuyan <sandipbhuyan@gmail.com>",
+  "license": "MIT"
+}
