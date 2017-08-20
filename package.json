@@ -18,7 +18,7 @@
     "url": "git+https://github.com/davezuko/react-redux-starter-kit.git"
   },
   "author": "Sandip Bhuyan",
-  "license": "Build-system",
+  "license": "Sandip",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha",
     "compression": "^1.6.2",

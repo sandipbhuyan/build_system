@@ -1,8 +1,8 @@
 import { applyMiddleware, compose, createStore as createReduxStore } from 'redux'
 import thunk from 'redux-thunk'
 import { browserHistory } from 'react-router'
-import makeRootReducer from './reducers'
-import { updateLocation } from './location'
+import makeRootReducer from '../reducers/index'
+import { updateLocation } from '../reducers/location'
 
 const createStore = (initialState = {}) => {
   // ======================================================
@@ -40,7 +40,7 @@ const createStore = (initialState = {}) => {
 
   if (module.hot) {
     module.hot.accept('./reducers', () => {
-      const reducers = require('./reducers').default
+      const reducers = require('../reducers/index').default
       store.replaceReducer(reducers(store.asyncReducers))
     })
   }
