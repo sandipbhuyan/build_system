@@ -84,6 +84,7 @@ The project structure presented in this boilerplate is **fractal**, where functi
 │   │       └── routes **    # Fractal sub-routes (** optional)
 │   ├── store                # Redux-specific pieces
 │   │   ├── createStore.js   # Create and instrument redux store
+│   │   └──
 │   └── styles               # Application-wide styles (generally settings)
 └── tests                    # Unit tests
 ```
