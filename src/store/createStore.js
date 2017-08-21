@@ -1,10 +1,15 @@
-import { applyMiddleware, compose, createStore as createReduxStore } from 'redux'
+import { applyMiddleware, compose, createStore } from 'redux'
 import thunk from 'redux-thunk'
 import { browserHistory } from 'react-router'
 import makeRootReducer from '../reducers/index'
 import { updateLocation } from '../reducers/location'
+import { createLogger } from 'redux-logger'
 
-const createStore = (initialState = {}) => {
+const logger = createLogger({
+    // ...options
+});
+
+export default (initialState = {}) => {
   // ======================================================
   // Middleware Configuration
   // ======================================================
@@ -16,16 +21,20 @@ const createStore = (initialState = {}) => {
   const enhancers = []
   let composeEnhancers = compose
 
-  if (__DEV__) {
-    if (typeof window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ === 'function') {
-      composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    if (__DEV__) {
+        const composeWithDevToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+        if (typeof window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ === 'function') {
+            composeEnhancers = composeWithDevToolsExtension
+        }
+
+        // logger for dev
+        middleware.push(logger)
     }
-  }
 
   // ======================================================
   // Store Instantiation and HMR Setup
   // ======================================================
-  const store = createReduxStore(
+  const store = createStore(
     makeRootReducer(),
     initialState,
     composeEnhancers(
@@ -48,4 +57,3 @@ const createStore = (initialState = {}) => {
   return store
 }
 
-export default createStore
