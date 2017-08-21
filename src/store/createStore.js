@@ -39,7 +39,7 @@ const createStore = (initialState = {}) => {
   store.unsubscribeHistory = browserHistory.listen(updateLocation(store))
 
   if (module.hot) {
-    module.hot.accept('./reducers', () => {
+    module.hot.accept('../reducers/index', () => {
       const reducers = require('../reducers/index').default
       store.replaceReducer(reducers(store.asyncReducers))
     })

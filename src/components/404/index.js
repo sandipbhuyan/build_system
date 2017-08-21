@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class CoreLayout extends Component {
+class FourOhFour extends Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ class CoreLayout extends Component {
     }
 }
 
-export default CoreLayout;
+export default FourOhFour;
