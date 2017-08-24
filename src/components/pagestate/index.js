@@ -27,7 +27,7 @@ class PageState extends Component {
         return(
             <div className='main-page'>
                 <h1 className={this.props.pageStateReducer.pageState === 'heloves' ? '' : 'hide' }>Welcome to my world <span>,Sandip..</span></h1>
-                <h1 className={this.props.pageStateReducer.pageState === 'back' ? '' : 'hide' }><span>Arpita</span></h1>
+                <h1 className={this.props.pageStateReducer.pageState === 'back' ? '' : 'hide' }><span>React</span></h1>
                 <img className={this.props.pageStateReducer.pageState === 'back' ? '' : 'hide' } src={heart} alt=""/>
                 <div className='increase-page'>
                     <a className={this.props.pageStateReducer.pageState === 'heloves' ? 'btn btn-red' : 'hide' } href='#' onClick={this.changeState}>He Loves</a>
