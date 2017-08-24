@@ -4,7 +4,7 @@ class FourOhFour extends Component {
     render() {
         return (
             <div>
-                Hello World
+                
             </div>
         )
     }

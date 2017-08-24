@@ -6,25 +6,24 @@
   align-items: center;
   flex-direction: column;
 
-  h1 {
-    color: gray;
-
-    span {
-      color: red;
-    }
-  }
-
-  .increase-page {
+  .content-container {
+    height: 70%;
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 
-    a {
-      &:hover {
+    h1 {
+      color: gray;
+
+      span {
         color: red;
-        background: white;
-        cursor: pointer;
       }
+    }
+    p {
+      font-weight: 500;
+      color: grey;
+      font-size: 50;
     }
   }
 }
