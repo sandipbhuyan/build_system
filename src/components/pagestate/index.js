@@ -36,17 +36,8 @@ class PageState extends Component {
             </div>
         )
     }
-
-
 }
 
-// PageState.propTypes = {
-//     dispatch: React.PropTypes.func,
-//     pageStateReducer: React.PropTypes.shape({
-//         pageState: React.PropTypes.string
-//     })
-//
-// }
 
 const mapStateToProps = (state,ownProps) => {
     return state
