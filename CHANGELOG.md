@@ -48,7 +48,7 @@ Changelog
 -------------
 
 ### Improvements
-* Migrated to Fractal Project Structure, huge thanks to [justingreenberg](https://github.com/justingreenberg). See https://github.com/davezuko/react-redux-starter-kit/pull/684 for details and discussion.
+* Migrated to Fractal Project Structure, huge thanks to [justingreenberg](https://github.com/justingreenberg). See https://github.com/sandipbhuyan/build-system/pull/684 for details and discussion.
 
 2.0.0
 -----
@@ -74,7 +74,7 @@ Changelog
 * Added missing node-style index files in blueprints
 
 ### Fixes
-* Modified webpack manifest initialization to prevent syntax errors in some environments (https://github.com/davezuko/react-redux-starter-kit/issues/572)
+* Modified webpack manifest initialization to prevent syntax errors in some environments (https://github.com/davezuko/build-system/issues/572)
 
 2.0.0-alpha.4
 -------------
@@ -356,7 +356,7 @@ Changelog
 #### Features
 * Replaces `react-transform-webpack-hmr` with its replacement `react-transform-hmr`. Thanks to [daviferreira](https://github.com/daviferreira).
 * Replaces `delicate-error-reporter` with `redbox-react`. Thanks to [bulby97](https://github.com/bulby97).
-* Created a `no-server` branch [here](https://github.com/davezuko/react-redux-starter-kit/tree/no-server) to make it easier for users who don't care about Koa.
+* Created a `no-server` branch [here](https://github.com/davezuko/build-system/tree/no-server) to make it easier for users who don't care about Koa.
 
 #### Improvements
 * Renames `client` directory to `src` to be more intuitive.
@@ -418,7 +418,7 @@ Changelog
 #### Improvements
 * Eslint no longer prevents webpack from bundling in development mode if an error is emitted.
   * See: https://github.com/MoOx/eslint-loader/issues/23
-* Updates all `.jsx` files to `.js`. (https://github.com/davezuko/react-redux-starter-kit/issues/37)
+* Updates all `.jsx` files to `.js`. (https://github.com/davezuko/build-system/issues/37)
 * Updates all React component file names to be ProperCased.
 
 0.9.0
@@ -477,7 +477,7 @@ Changelog
 
 #### Fixes
 * Fixes potential spacing issues when Webpack tries to load a config file.
-  - Thanks to [nuragic](https://github.com/nuragic) for his [PR](https://github.com/davezuko/react-redux-starter-kit/pull/32)
+  - Thanks to [nuragic](https://github.com/nuragic) for his [PR](https://github.com/davezuko/build-system/pull/32)
 
 #### Improvements
 * Upgrades koa to `1.0.0`
@@ -497,13 +497,13 @@ Changelog
 -----
 
 #### Improvements
-* Cleans up/removes example code per https://github.com/davezuko/react-redux-starter-kit/issues/20
+* Cleans up/removes example code per https://github.com/davezuko/build-system/issues/20
 
 0.3.1
 -----
 
 #### Fixes
-* https://github.com/davezuko/react-redux-starter-kit/issues/19
+* https://github.com/davezuko/build-system/issues/19
   - Invalid initialStates from server-side router will now yield to the next middleware.
 
 0.3.0
