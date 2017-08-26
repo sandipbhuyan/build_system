@@ -118,24 +118,5 @@ We use `react-router` [route definitions](https://github.com/ReactTraining/react
 ## Testing
 To add a unit test, create a `.spec.js` file anywhere inside of `./tests`. Karma and webpack will automatically find these files, and Mocha and Chai will be available within your test without the need to import them. Here are a few important plugins and packages available to you during testing:
 
-### dirty-chai
 
-Some of the assertions available from [chai](chaijs.com) use [magical getters](http://chaijs.com/api/bdd/#method_true). These are problematic for a few reasons:
-
-1) If you mistype a property name (e.g. `expect(false).to.be.tru`) then the expression evaluates to undefined, the magical getter on the `true` is never run, and so your test silently passes.
-2) By default, linters don't understand them and therefore mark them as unused expressions, which can be annoying.
-
-[Dirty Chai](https://github.com/prodatakey/dirty-chai) fixes this by converting these getters into callable functions. This way, if mistype an assertion, our attempt to invoke it will throw due to the property being undefined.
-
-```js
-// This silently passes because the getter on `true` is never invoked!
-it('should be true', () => {
-  expect(false).to.be.tru // evalutes to undefined :(
-})
-
-// Much better! Our assertion is invalid, so it throws rather than implicitly passing.
-it('should be true', () => {
-  expect(false).to.be.tru() // `tru` is not defined!
-})
-```
 
