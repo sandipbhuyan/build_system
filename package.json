@@ -1,7 +1,7 @@
 {
   "name": "build-system",
   "version": "1.0.0",
-  "description": "Get started with React, Redux, and React-Router!",
+  "description": "React Redux build system",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
@@ -12,6 +12,54 @@
     "test:watch": "npm test -- --watch",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix"
+  },
+  "betterScripts": {
+    "compile": {
+      "command": "node bin/compile",
+      "env": {
+        "DEBUG": "app:*"
+      }
+    },
+    "dev": {
+      "command": "nodemon bin/dev-server --ignore dist --ignore coverage --ignore tests --ignore src",
+      "env": {
+        "NODE_ENV": "development",
+        "DEBUG": "app:*"
+      }
+    },
+    "deploy": {
+      "command": "npm run lint && npm run clean && npm run compile",
+      "env": {
+        "DEBUG": "app:*"
+      }
+    },
+    "deploy:dev": {
+      "command": "npm run deploy",
+      "env": {
+        "NODE_ENV": "development",
+        "DEBUG": "app:*"
+      }
+    },
+    "deploy:prod": {
+      "command": "npm run deploy",
+      "env": {
+        "NODE_ENV": "production",
+        "DEBUG": "app:*"
+      }
+    },
+    "start": {
+      "command": "node bin/dev-server",
+      "env": {
+        "DEBUG": "app:*"
+      }
+    },
+    "test": {
+      "command": "node ./node_modules/karma/bin/karma start config/karma.config",
+      "env": {
+        "NODE_ENV": "test",
+        "DEBUG": "app:*"
+      }
+    }
   },
   "repository": {
     "type": "git",
